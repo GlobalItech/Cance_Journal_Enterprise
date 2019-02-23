@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<odoo>
+        <data>
+        
+
+
+      <record id="view_allowed_cancel_users_form" model="ir.ui.view">
+            <field name="name">user_cancel.users.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form"/>
+            <field name="arch" type="xml">
+              <xpath expr="//form/header/button[@name='action_invoice_draft']" position="after">
+                
+                 <button name="action_invoice_cancel" type="object" states="draft,proforma2" string="Cancel Bill" groups="cancel_journal.module_cancel_group"/>
+            
+            </xpath>
+          
+            </field>
+        </record>
+        
+        
+         <record id="view_allowed_cancel_journal_form" model="ir.ui.view">
+            <field name="name">user_cancel.journal.form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account_cancel.view_move_form_inherit_account_cancel"/>
+            <field name="arch" type="xml">
+              <xpath expr="//form/header/button[@name='button_cancel']" position ="replace">
+            
+                <button name="button_cancel" states="posted" string="Cancel Entry" type="object" groups="cancel_journal.module_cancel_group"/>
+                
+            </xpath>
+
+          
+            </field>
+        </record>
+        
+        
+         <record id="view_allowed_cancel_invoice_form" model="ir.ui.view">
+            <field name="name">user_cancel.invoice.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form"/>
+            <field name="arch" type="xml">
+              <xpath expr="//form/header/button[@name='action_invoice_draft']" position ="after">
+            
+               <button name="action_invoice_cancel" type="object" states="draft,proforma2,open" string="Cancel Invoice" groups="cancel_journal.module_cancel_group"/>
+                    
+            </xpath>
+
+          
+            </field>
+        </record>
+     
+     
+     
+    </data>
+        
+</odoo>
+       

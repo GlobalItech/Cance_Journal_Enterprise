@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="res.groups" id="module_cancel_group">
+            
+            <field name="name">Entries Cancel</field>
+            <field name="description">Cancel Rights Access</field>
+            <field name="sequence">20</field>
+        
+        </record>
+            
+    </data>
+</odoo>
