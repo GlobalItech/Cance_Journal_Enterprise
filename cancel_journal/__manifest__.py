@@ -1,5 +1,5 @@
 {
-    'name':   'Cancel Journal Entries Enterprise',
+    'name':   'User Rights for Cancel Journal Entries (Enterprise)',
     'author': 'Itech Resources',
     'company': 'ItechResources',
     'summary': 'This module is for Odoo 11 Enterprise',
